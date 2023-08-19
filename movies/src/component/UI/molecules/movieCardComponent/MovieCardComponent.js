@@ -17,7 +17,7 @@ const MovieCardComponent = (props) => {
         <div className="title">
           <EllipseComponent info={movie.title} />
         </div>
-        <div>{movie.vote_average}</div>
+        <div>({movie.vote_average})</div>
       </div>
       <div className="overView">
         <EllipseComponent info={movie.overview} />

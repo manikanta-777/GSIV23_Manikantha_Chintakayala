@@ -4,19 +4,27 @@ import { MoviesListComponent } from "../../UI/organism/moviesListComponent/Movie
 import HeaderComponent from "../../UI/organism/headerComponent/HeaderComponent";
 
 export const MoviesListTemplate = (props) => {
-  const { moviesData, setSearchValue } = props;
+  const { moviesData, setSearchValue, setPage, totalPages } = props;
   return (
     <div>
       <HeaderComponent setSearchValue={setSearchValue} />
-      <MoviesListComponent moviesData={moviesData} />
+      <MoviesListComponent
+        moviesData={moviesData}
+        setPage={setPage}
+        totalPages={totalPages}
+      />
     </div>
   );
 };
 MoviesListTemplate.defaultProps = {
   moviesData: [],
   setSearchValue: () => {},
+  setPage: () => {},
+  totalPages: 1,
 };
 MoviesListTemplate.propTypes = {
   moviesData: PropTypes.array,
   setSearchValue: PropTypes.func,
+  setPage: PropTypes.func,
+  totalPages: PropTypes.number,
 };

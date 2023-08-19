@@ -8,15 +8,15 @@ const axiosInterceptor = (data) => {
   });
 };
 
-export const getMovies = async (searchValue) => {
+export const getMovies = async (searchValue, page) => {
   let request = {
     method: "get",
-    url: "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=2&api_key=1afbcc3f6732dc30ef275cfc3c5fed30",
+    url: `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=${page}&api_key=1afbcc3f6732dc30ef275cfc3c5fed30`,
   };
   if (searchValue !== "") {
     request = {
       method: "get",
-      url: `https://api.themoviedb.org/3/search/movie?query=${searchValue}&page=2&api_key=1afbcc3f6732dc30ef275cfc3c5fed30`,
+      url: `https://api.themoviedb.org/3/search/movie?query=${searchValue}&page=${page}&api_key=1afbcc3f6732dc30ef275cfc3c5fed30`,
     };
   }
   const { data } = await axiosInterceptor(request);

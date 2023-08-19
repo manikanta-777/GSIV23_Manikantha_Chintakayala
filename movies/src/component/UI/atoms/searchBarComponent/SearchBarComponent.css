@@ -11,30 +11,16 @@
 }
 
 .searchIcon {
-  /* height: 3.2vmax;
-  width: 3.2vmax; */
   padding: 0vmax 1vmax;
   background-color: #fff;
   display: flex;
   place-items: center;
   border: 2px solid #000048;
-  /* border-left: unset; */
+  border-left: unset;
 }
-
-input:focus {
-  outline: none;
+.searchIcon:hover {
+  background-color: cornflowerblue;
 }
-
-@media (max-width: 480px) {
-  .searchIcon {
-    height: 3.2vmax;
-    width: 3.2vmax;
-  }
-  .search input {
-    width: 40vmax;
-    padding: 2%;
-  }
-  .searchIcon {
-    padding-top: 0.5vmax;
-  }
+.searchIcon:active {
+  background-color: crimson;
 }

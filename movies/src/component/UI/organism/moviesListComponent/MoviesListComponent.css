@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   margin: 1%;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (max-width: 512px) {
   .moviesList {

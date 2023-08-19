@@ -4,7 +4,10 @@ import {
   ALL_MOVIES_SUCCESS,
 } from "../constants/moviesListConstants";
 
-export const moviesListReducer = (state = { moviesData: [] }, action) => {
+export const moviesListReducer = (
+  state = { moviesData: [], totalPages: 1 },
+  action
+) => {
   switch (action.type) {
     case ALL_MOVIES_REQUEST:
       return {
@@ -13,7 +16,8 @@ export const moviesListReducer = (state = { moviesData: [] }, action) => {
       };
     case ALL_MOVIES_SUCCESS:
       return {
-        moviesData: action.payload,
+        moviesData: action.payload.results,
+        totalPages: action.payload.total_pages,
       };
     case ALL_MOVIES_FAIL:
       return {

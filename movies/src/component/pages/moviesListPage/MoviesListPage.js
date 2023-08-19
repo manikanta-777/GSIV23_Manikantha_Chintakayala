@@ -5,17 +5,19 @@ import { moviesListAction } from "../../../redux/actions/moviesListAction";
 
 export const MoviesListPage = () => {
   const [searchValue, setSearchValue] = useState("");
-  console.log("searchvalue:", searchValue);
+  const [page, setPage] = useState(1);
   const dispatch = useDispatch();
-  const { moviesData } = useSelector((state) => state.moviesList);
+  const { moviesData, totalPages } = useSelector((state) => state.moviesList);
   useEffect(() => {
-    dispatch(moviesListAction(searchValue));
-  }, [dispatch, searchValue]);
+    dispatch(moviesListAction(searchValue, page));
+  }, [dispatch, searchValue, page]);
   return (
     <div>
       <MoviesListTemplate
         moviesData={moviesData}
         setSearchValue={setSearchValue}
+        setPage={setPage}
+        totalPages={totalPages}
       />
     </div>
   );
