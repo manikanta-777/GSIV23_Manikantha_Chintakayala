@@ -4,7 +4,7 @@ import { composeWithDevTools } from "@redux-devtools/extension";
 import { moviesListReducer } from "./reducers/moviesListReducer";
 
 const reducer = combineReducers({
-  moviesList:moviesListReducer
+  moviesList: moviesListReducer,
 });
 
 let initialState = {};

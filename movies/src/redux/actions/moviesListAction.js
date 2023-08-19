@@ -5,10 +5,10 @@ import {
   ALL_MOVIES_SUCCESS,
 } from "../constants/moviesListConstants";
 
-export const moviesListAction = () => async (dispatch) => {
+export const moviesListAction = (searchValue) => async (dispatch) => {
   try {
     dispatch({ type: ALL_MOVIES_REQUEST });
-    const moviesData = await getMovies();
+    const moviesData = await getMovies(searchValue);
     dispatch({
       type: ALL_MOVIES_SUCCESS,
       payload: moviesData.results,
