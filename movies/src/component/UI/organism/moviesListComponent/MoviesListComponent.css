@@ -1,0 +1,12 @@
+.moviesList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1%;
+}
+
+@media screen and (max-width: 512px) {
+  .moviesList {
+    margin-top: 7%;
+  }
+}

@@ -1,0 +1,46 @@
+.card {
+  width: 18vmax;
+  color: rgb(14, 12, 12);
+  margin: 1vmax 0;
+  transition: all 0.5;
+  border: 0.5px solid #999595;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: unset;
+}
+
+.card > img {
+  width: 18vmax;
+  object-fit: contain;
+}
+.titleRow {
+  font-size: 1.3vmax;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5vmax;
+  font-weight: bold;
+  padding: 0vmax;
+}
+.title {
+  width: 13vmax;
+}
+.overView {
+  font-size: 1.1vmax;
+  margin: 0.5vmax;
+  padding: 0vmax;
+  width: 16vmax;
+}
+
+.card:hover {
+  box-shadow: 0 0 5px #000;
+  transform: translateY(-1vmax);
+}
+@media screen and (max-width: 512px) {
+  .title {
+    font-size: 1.8vmax;
+  }
+  .card > p {
+    font-size: 2vmax;
+  }
+}

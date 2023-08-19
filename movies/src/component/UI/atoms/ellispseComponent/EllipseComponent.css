@@ -1,0 +1,7 @@
+.info {
+  margin: 0.5vmax;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

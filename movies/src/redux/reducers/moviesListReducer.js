@@ -1,4 +1,8 @@
-import { ALL_MOVIES_FAIL, ALL_MOVIES_REQUEST, ALL_MOVIES_SUCCESS } from "../constants/moviesListConstants";
+import {
+  ALL_MOVIES_FAIL,
+  ALL_MOVIES_REQUEST,
+  ALL_MOVIES_SUCCESS,
+} from "../constants/moviesListConstants";
 
 export const moviesListReducer = (state = { moviesData: [] }, action) => {
   switch (action.type) {
@@ -9,7 +13,7 @@ export const moviesListReducer = (state = { moviesData: [] }, action) => {
       };
     case ALL_MOVIES_SUCCESS:
       return {
-        moviesData:action.payload
+        moviesData: action.payload,
       };
     case ALL_MOVIES_FAIL:
       return {

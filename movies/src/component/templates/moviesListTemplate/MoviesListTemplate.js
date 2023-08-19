@@ -1,12 +1,18 @@
-import React from 'react'
-import { MoviesListComponent } from '../../UI/organism/moviesListComponent/MoviesListComponent'
+import React from "react";
+import PropTypes from "prop-types";
+import { MoviesListComponent } from "../../UI/organism/moviesListComponent/MoviesListComponent";
 
-
-export const MoviesListTemplate = () => {
+export const MoviesListTemplate = (props) => {
+  const { moviesData } = props;
   return (
-    <div>MoviesListTemplate
-        <MoviesListComponent/>
+    <div>
+      <MoviesListComponent moviesData={moviesData} />
     </div>
-    
-  )
-}
+  );
+};
+MoviesListTemplate.defaultProps = {
+  moviesData: [],
+};
+MoviesListTemplate.propTypes = {
+  moviesData: PropTypes.array,
+};

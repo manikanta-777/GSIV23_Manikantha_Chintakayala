@@ -15,6 +15,6 @@ export const getMovies = async () => {
   };
   const { data } = await axiosInterceptor(request);
   // const newData = await ProductsMiddleware(data);
-  console.log("data in axios",data);
+  console.log("data in axios", data);
   return data;
 };
