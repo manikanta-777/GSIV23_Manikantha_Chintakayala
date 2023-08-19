@@ -1,0 +1,32 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.voteAvareage {
+  font-weight: 400;
+}
+.yearLength {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.2vmax;
+}
+.overview {
+  width: 80%;
+  font-size: 1.3vmax;
+}
+
+.Description {
+  font-weight: 600;
+}
+@media screen and (max-width: 512px) {
+  .box {
+    align-items: center;
+  }
+  .yearLength {
+    font-size: 1.9vmax;
+  }
+  .overview {
+    font-size: 1.8vmax;
+  }
+}

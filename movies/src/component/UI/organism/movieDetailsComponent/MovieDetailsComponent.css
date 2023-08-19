@@ -1,0 +1,10 @@
+.movieDetails {
+  display: flex;
+  padding: 2%;
+}
+@media screen and (max-width: 512px) {
+  .movieDetails {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,14 @@
+.movieImage {
+  padding-right: 2%;
+}
+
+.movieImage > img {
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 512px) {
+  .movieImage > img {
+    padding-left: 12%;
+    align-items: center;
+  }
+}

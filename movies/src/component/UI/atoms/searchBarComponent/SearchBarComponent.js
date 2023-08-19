@@ -14,10 +14,10 @@ const SearchBarComponent = (props) => {
     width: 300,
 
     "@media (min-width:850px)": {
-      width: 600,
+      width: 450,
     },
     "@media (min-width:1080px)": {
-      width: 800,
+      width: 600,
     },
   };
   const iconStyle = {
@@ -31,6 +31,9 @@ const SearchBarComponent = (props) => {
   };
   return (
     <div maxWidth="md" className="searchInputs">
+      <div className="searchIcon">
+        <SearchIcon sx={iconStyle} onClick={() => heandleSearch()} />
+      </div>
       <div>
         <TextField
           type="search"
@@ -40,9 +43,6 @@ const SearchBarComponent = (props) => {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         />
-      </div>
-      <div className="searchIcon">
-        <SearchIcon sx={iconStyle} onClick={() => heandleSearch()} />
       </div>
     </div>
   );

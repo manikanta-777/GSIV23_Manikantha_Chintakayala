@@ -1,13 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { MoviesListComponent } from "../../UI/organism/moviesListComponent/MoviesListComponent";
-import HeaderComponent from "../../UI/organism/headerComponent/HeaderComponent";
-
+import SearchBarComponent from "../../UI/atoms/searchBarComponent/SearchBarComponent";
+import HomeComponent from "../../UI/atoms/homeComponent/HomeComponent";
+import "./MoviesListTemplate.css";
 export const MoviesListTemplate = (props) => {
   const { moviesData, setSearchValue, setPage, totalPages } = props;
   return (
     <div>
-      <HeaderComponent setSearchValue={setSearchValue} />
+      <div className="header">
+        <div>
+          <SearchBarComponent setSearchValue={setSearchValue} />
+        </div>
+        <div>
+          <HomeComponent />
+        </div>
+      </div>
       <MoviesListComponent
         moviesData={moviesData}
         setPage={setPage}
