@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import MovieCardComponent from "../../molecules/movieCardComponent/MovieCardComponent";
-import "./MoviesListComponent.css";
+import PropTypes from "prop-types";
 import Pagination from "@mui/material/Pagination";
+import "./MoviesListComponent.css";
 
 export const MoviesListComponent = (props) => {
   const [pageNumber, setPageNumber] = useState(1);
-
   const { moviesData, setPage, totalPages } = props;
   const handleChange = (event, value) => {
     setPageNumber(value);

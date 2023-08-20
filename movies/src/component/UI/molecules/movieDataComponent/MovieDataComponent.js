@@ -1,16 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./MovieDataComponent.css";
 import TimeComponent from "../../atoms/timeComponent/TimeComponent";
+import "./MovieDataComponent.css";
+
 const MovieDataComponent = (props) => {
   const { movie } = props;
 
   return (
     <div className="box">
-      <h1>
+      <div className="titleVote">
         <span>{movie.title} </span>
         <span className="voteAvareage">({movie.vote_average})</span>
-      </h1>
+      </div>
       <div className="yearLength">
         <span>{movie.release_date} </span>
         <span> | </span>{" "}

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./ImageComponent.css";
+
 const ImageComponent = (props) => {
   const { movie } = props;
   return (

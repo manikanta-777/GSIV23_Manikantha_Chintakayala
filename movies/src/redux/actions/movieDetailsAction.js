@@ -8,10 +8,7 @@ import {
 export const movieDetailsAction = (id) => async (dispatch) => {
   try {
     dispatch({ type: MOVIE_DETAILS_REQUEST });
-
     const movieDetails = await getMovieDetails(id);
-    console.log("in actions", movieDetails);
-
     dispatch({
       type: MOVIE_DETAILS_SUCCESS,
       payload: movieDetails,

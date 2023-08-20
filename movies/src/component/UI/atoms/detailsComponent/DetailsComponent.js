@@ -1,5 +1,6 @@
 import React from "react";
 import "./DetailsComponent.css";
+
 const DetailsComponent = () => {
   return (
     <div className="Details">

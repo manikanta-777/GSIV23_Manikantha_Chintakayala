@@ -11,7 +11,6 @@
 
 .card > img {
   width: 18vmax;
-  object-fit: contain;
 }
 .titleRow {
   font-size: 1.3vmax;

@@ -1,8 +1,9 @@
 import React from "react";
+import ImageComponent from "../../molecules/imageComponent/ImageComponent";
 import MovieDataComponent from "../../molecules/movieDataComponent/MovieDataComponent";
 import PropTypes from "prop-types";
-import ImageComponent from "../../molecules/imageComponent/ImageComponent";
 import "./MovieDetailsComponent.css";
+
 const MovieDetailsComponent = (props) => {
   const { movie } = props;
   return (

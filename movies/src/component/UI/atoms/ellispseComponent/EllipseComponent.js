@@ -1,6 +1,7 @@
 import React from "react";
-import "./EllipseComponent.css";
 import PropTypes from "prop-types";
+import "./EllipseComponent.css";
+
 const EllipseComponent = (props) => {
   const { info } = props;
   return (

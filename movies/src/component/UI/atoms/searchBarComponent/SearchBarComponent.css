@@ -31,3 +31,8 @@
 .searchIcon:active {
   background-color: crimson;
 }
+@media screen and (max-width: 512px) {
+  .searchInputs {
+    padding: 0.5vmax 2vmax;
+  }
+}

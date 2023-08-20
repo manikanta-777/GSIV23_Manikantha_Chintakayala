@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import HomeComponent from "../../UI/atoms/homeComponent/HomeComponent";
 import { MoviesListComponent } from "../../UI/organism/moviesListComponent/MoviesListComponent";
 import SearchBarComponent from "../../UI/atoms/searchBarComponent/SearchBarComponent";
-import HomeComponent from "../../UI/atoms/homeComponent/HomeComponent";
 import "./MoviesListTemplate.css";
+
 export const MoviesListTemplate = (props) => {
   const { moviesData, setSearchValue, setPage, totalPages } = props;
   return (

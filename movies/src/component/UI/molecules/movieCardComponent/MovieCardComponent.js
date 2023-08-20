@@ -6,7 +6,6 @@ import EllipseComponent from "../../atoms/ellispseComponent/EllipseComponent";
 
 const MovieCardComponent = (props) => {
   const { movie } = props;
-
   return (
     <Link className="card" to={`/movie/${movie.id}`}>
       <img

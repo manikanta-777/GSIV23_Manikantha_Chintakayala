@@ -20,6 +20,5 @@ export const getMovies = async (searchValue, page) => {
     };
   }
   const { data } = await axiosInterceptor(request);
-  console.log("data in axios", data);
   return data;
 };

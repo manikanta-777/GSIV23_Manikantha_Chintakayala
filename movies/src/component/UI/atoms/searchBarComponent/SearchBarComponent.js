@@ -1,8 +1,28 @@
 import React, { useState } from "react";
-import { TextField } from "@mui/material";
 import PropTypes from "prop-types";
 import SearchIcon from "@mui/icons-material/Search";
+import { TextField } from "@mui/material";
 import "./SearchBarComponent.css";
+
+const textFieldStyle = {
+  width: 250,
+
+  "@media (min-width:850px)": {
+    width: 450,
+  },
+  "@media (min-width:1080px)": {
+    width: 600,
+  },
+};
+const iconStyle = {
+  fontSize: 10,
+  "@media (min-width:850px)": {
+    fontSize: 20,
+  },
+  "@media (min-width:1080px)": {
+    fontSize: 30,
+  },
+};
 
 const SearchBarComponent = (props) => {
   const { setSearchValue } = props;
@@ -10,25 +30,7 @@ const SearchBarComponent = (props) => {
   const heandleSearch = () => {
     setSearchValue(searchInput.trim());
   };
-  const textFieldStyle = {
-    width: 300,
 
-    "@media (min-width:850px)": {
-      width: 450,
-    },
-    "@media (min-width:1080px)": {
-      width: 600,
-    },
-  };
-  const iconStyle = {
-    fontSize: 10,
-    "@media (min-width:850px)": {
-      fontSize: 20,
-    },
-    "@media (min-width:1080px)": {
-      fontSize: 30,
-    },
-  };
   return (
     <div maxWidth="md" className="searchInputs">
       <div className="searchIcon">

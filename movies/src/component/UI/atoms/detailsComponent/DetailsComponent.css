@@ -1,6 +1,11 @@
 .Details {
   color: rgb(58, 4, 109);
-  font-size: 2vmax;
-  margin: -20px 0;
-  font-weight: 600;
+  font-size: 2.5vmax;
+  margin: -20px 2.2vmax;
+  font-weight: 700;
+}
+@media screen and (max-width: 512px) {
+  .Details {
+    margin: 0 5vmax;
+  }
 }
